@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Card</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;0,900;1,100;1,200;1,300;1,600;1,800&display=swap" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+</head>
+<body>
+    <div class="card">
+        <div class="qrCard">
+            <div class="qrcode-container" id="qrcode" style="background: rgb(77, 77, 192);"></div>
+        </div>
+        <h1>Improve your front-end skills by building projects</h1>
+        <p>Scan the QR code to visit Frontend Mentor and take your coding skill to the next level</p>
+    </div>
+
+    <script>
+        // Generate the QR code
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: "https://www.frontendmentor.io/home", // Replace with your URL or content
+            width: 180,
+            height: 190,
+            colorDark: "#0000FF",
+        });
+    </script>
+</body>
+</html>
